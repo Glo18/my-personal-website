@@ -1,1 +1,44 @@
+:root {
+  --bg-light: #f8f8f8;
+  --bg-dark: #121212;
+  --text-light: #000;
+  --text-dark: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header, section, footer {
+  padding: 20px;
+  margin: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.grid > div {
+  background: #eee;
+  padding: 15px;
+  flex: 1 1 250px;
+  border-radius: 8px;
+}
 
