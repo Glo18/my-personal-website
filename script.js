@@ -41,9 +41,10 @@ if (navLinks.length > 0) {
 const projectContainer = document.getElementById("projectContainer");
 if (projectContainer) {
   const projects = [
-    { title: "Portfolio Site", category: "Web", image: "assets/project1.jpg" },
-    { title: "Data Dashboard", category: "Data", image: "assets/project2.jpg" },
-    { title: "AI Chatbot", category: "AI", image: "assets/project3.jpg" },
+    { title: "Personal Website", category: "website", image: "img2.jpg" },
+    { title: "Library System", category: "system", image: "img3.jpg" },
+    { title: "Social Media App", category: "socialmedia", image: "img4.jpg" },
+    { title: "Encryption & Decryption App", category: "app", image: "img5.jpg" },
   ];
 
   window.displayProjects = function (category = "all") {
