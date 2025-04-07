@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Glory Kiogora</title>
+  <title>My Portfolio - Glory Kiogora</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.ico" />
 </head>
 <body>
 
   <!-- Header & Navigation -->
   <header>
-    <nav>
+    <nav id="navbar">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <button id="theme-toggle">Toggle Theme</button>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><button id="theme-toggle">Toggle Theme</button></li>
       </ul>
     </nav>
   </header>
 
   <!-- Home Section -->
-  <section id="home" class="section">
+  <section id="home" class="section fade-in">
     <h1 id="greeting"></h1>
     <p>Welcome to my personal website!</p>
   </section>
 
   <!-- About Me Section -->
-  <section id="about" class="section">
+  <section id="about" class="section fade-in">
     <h2>About Me</h2>
     <img src="" alt="" />
     <p>...</p>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
+  <section id="projects" class="section fade-in">
     <h2>My Projects</h2>
     <div class="filters">
       <button onclick="filterProjects('all')">All</button>
@@ -45,16 +46,16 @@
   </section>
 
   <!-- Blog Section -->
-  <section id="blog" class="section">
+  <section id="blog" class="section fade-in">
     <h2>My Blog</h2>
     <input type="text" id="blog-search" placeholder="Search blog posts..." />
     <div id="blogContainer"></div>
   </section>
 
   <!-- Contact Form -->
-  <section id="contact" class="section">
+  <section id="contact" class="section fade-in">
     <h2>Contact Me</h2>
-    <form id="contact-form">
+    <form id="contactForm">
       <input type="text" id="name" placeholder="Your Name" required />
       <input type="email" id="email" placeholder="Your Email" required />
       <textarea id="message" placeholder="Your Message" required></textarea>
@@ -67,6 +68,9 @@
   <footer>
     <p>&copy; 2025 My Personal Website</p>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Go to top">↑</button>
 
   <script src="script.js"></script>
 </body>
