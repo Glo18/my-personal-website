@@ -96,3 +96,27 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     this.reset();
   }
 });
+
+// Scroll Reveal Animation
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px"
+};
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("visible");
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+// Back to Top Button
+const backToTop = document.getElementById("backToTop");
+window.onscroll = () => {
+  backToTop.style.display = window.scrollY > 400 ? "block" : "none";
+};
+backToTop.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
