@@ -195,3 +195,56 @@ footer {
 #backToTop:hover {
   opacity: 0.8;
 }
+
+/* About Page Wrapper Layout */
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: left;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Refined Profile Image */
+.profile-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  display: block;
+}
+
+/* About Text Styling */
+.about-content {
+  max-width: 600px;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* Section Heading Line */
+.section h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  border-radius: 3px;
+}
