@@ -1,41 +1,112 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Reset and Theme Variables */
+* {
   margin: 0;
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background-color 0.3s, color 0.3s;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  --bg: #fff;
-  --text: #333;
+  --bg: #ffffff;
+  --text: #1e1e1e;
+  --accent: #6200ea;
+  --light: #f0f0f0;
+  --dark: #121212;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding-top: 60px;
 }
 
 .dark-mode {
   --bg: #121212;
-  --text: #f0f0f0;
+  --text: #ffffff;
+  --accent: #bb86fc;
+  --light: #222;
 }
 
+/* Navigation */
 nav {
-  background-color: #6200ea;
-  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--accent);
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
-  display: flex;
   list-style: none;
-  justify-content: space-around;
-  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+nav ul li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active,
+nav a:hover {
+  border-bottom: 2px solid white;
+}
+
+/* Sections */
 .section {
-  padding: 40px 20px;
-  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
 
+section:nth-child(odd) {
+  background-color: var(--light);
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+/* Home */
+#greeting {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+/* About */
 .profile-img {
   width: 150px;
   border-radius: 50%;
+  margin: 20px 0;
+}
+
+/* Projects */
+.filters {
+  margin-bottom: 20px;
+}
+
+.filters button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .project-grid {
@@ -45,27 +116,47 @@ nav ul {
 }
 
 .project {
-  padding: 10px;
-  border: 1px solid #ccc;
+  background-color: white;
+  padding: 15px;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
 
 .project:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
-input, textarea, button {
-  display: block;
-  width: 80%;
-  margin: 10px auto;
+/* Blog */
+#blogSearch {
   padding: 10px;
-  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-button {
-  background-color: #6200ea;
+/* Contact Form */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: var(--accent);
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--accent);
+  color: white;
+  margin-top: 40px;
 }
