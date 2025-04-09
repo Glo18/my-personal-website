@@ -41,7 +41,6 @@ if (navLinks.length > 0) {
 const projectContainer = document.getElementById("projectContainer");
 if (projectContainer) {
   const projects = [
-    { title: "Personal Website", category: "website", image: "img2.jpg" },
     { title: "Library System", category: "system", image: "img3.jpg" },
     { title: "Social Media App", category: "socialmedia", image: "img4.jpg" },
     { title: "Encryption & Decryption App", category: "app", image: "img5.jpg" },
@@ -60,6 +59,13 @@ if (projectContainer) {
           </div>`;
       });
   };
+  
+  window.filterProjects = function (btn, category) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  displayProjects(category);
+};
+
 
   displayProjects(); // Initial load
 }
