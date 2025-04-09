@@ -24,12 +24,12 @@
 <section class="section fade-in">
   <h2>My Projects</h2>
   <div class="filters">
-    <button onclick="displayProjects('all')">All</button>
-    <button onclick="displayProjects('Personal Website')">Personal Website</button>
-    <button onclick="displayProjects('Library System')">Library System</button>
-    <button onclick="displayProjects('Social Media App')">Social Media App</button>
-    <button onclick="displayProjects('Encryption & Decryption App')">Encryption & Decryption App</button>
-  </div>
+  <button class="filter-btn active" onclick="filterProjects(this, 'all')">All</button>
+  <button class="filter-btn" onclick="filterProjects(this, 'system')">Library System</button>
+  <button class="filter-btn" onclick="filterProjects(this, 'socialmedia')">Social Media App</button>
+  <button class="filter-btn" onclick="filterProjects(this, 'app')">Encryption & Decryption App</button>
+</div>
+
   <div id="projectContainer" class="project-grid"></div>
 </section>
 
